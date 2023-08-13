@@ -5,7 +5,6 @@ import pandas as pd
 from selenium import webdriver
 import pandas as pd
 from time import sleep
-# 拿到所有非英语的语言
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from openpyxl import Workbook
