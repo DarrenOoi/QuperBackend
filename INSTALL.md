@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-* Python Version 3.7 or later
-* Chrome version 103 (if you have a diffrent Chrome version, you can download the corresponding chromedriver version from: https://chromedriver.chromium.org and replace the file in '/libray/chromedriver')
+* Python Version 3.8 or later
+* Chrome version 115 (if you have a diffrent Chrome version, you can download the corresponding chromedriver version from: https://chromedriver.chromium.org and replace the file in '/libray/chromedriver')
 
 ## Python Library Dependencies
 
