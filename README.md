@@ -1,4 +1,4 @@
-# SKIPPER
+# Quper
 ## Folder Structure
 
 ```
@@ -6,44 +6,23 @@
 ├── LICENSE.md
 ├── INSTALL.md
 ├── src
-│   ├── P1
-│   ├── P1_PP_processing.py
-│   │       ├── text_preprocessing.py  
-│   │        <!-- paragraph level -->
+│   ├── Compliance of disclosure
+│   │	├── compliance_of_disclosure.py
+│   │       ├── predict_content.py  
 │   │       ├── find_subtitle.py
-│   │       │ 	├── paragraph_bayesian.py
-│   │       ├── types_pp_processing.py
-│   │        <!-- sentence level -->
-│   │       │   ├── sentence_bayesian.py
-│   │       │   ├── phrase_similarity.py
-│   │       ├── children_pp_processing.py
-│   │       ├── region_pp_processing.py
-│   │       ├── retention_pp_processing.py
-│   ├── P2
-│   │	├── test_case_execution.py
-│   │       ├── echo_spider.py
-│   ├── P3
-│       ├── behavior_log_process.py
-│           ├── noncompliance_check.py
-│           ├── utilities.py
-├── dataset
-│	├── SkillExplorer_log
-│	├── training_data
-│	    ├── title.csv
-│	    ├── personal_type.csv
-├── example
-│   ├── CHILDREN_example
-│   ├── REGIONS_example
-│   ├── RETENTION_example
-│   ├── TYPES_example
-│   ├── pp_example
-├── benchmark
-│   ├── bechmark_log_type
-│   ├── benchmark_log_child
-│   ├── benchmark_log_region
-│   ├── benchmark_log_retention
-└── library
-    └── chromedriver
+│   │       ├── bys_classifier.pkl
+│   │       ├── bys_tf.pkl
+│   │	├── pp_example
+│   ├── Timeliness
+│   │	├── timeline.py
+│   ├── Availability
+├── ├── <!-- External Link -->
+│   │   ├── get_external_link.py
+├── ├── <!-- Language Type -->
+│       ├── get_language_type.py
+│   ├── Readability
+│   │	├── readability.py
+│   │	├── pp_example
 
 ```
 ***Note:*** This tree includes only main files. 
