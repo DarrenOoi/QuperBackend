@@ -4,7 +4,6 @@ import re
 import bs4
 import joblib
 
-# from bayesian import clf,tf
 from bs4 import BeautifulSoup
 
 mark_txt = {'0':"personal_information_type.txt",'1':"personal_information_type.txt",'2':"personal_information_type.txt",
