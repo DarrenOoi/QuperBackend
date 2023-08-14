@@ -4,7 +4,7 @@ import os
 from bs4 import BeautifulSoup
 
 import pandas as pd
-from beautifulSoupGetText import pre_title
+from predict_content import pre_title
 from find_Title import findTitleLabel
 
 
