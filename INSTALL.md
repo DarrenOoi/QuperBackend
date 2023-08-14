@@ -7,7 +7,7 @@
 
 ## Python Library Dependencies
 
-* pandas
+* joblib
 * os
 * argparse
 * time
@@ -18,10 +18,10 @@
 * BeautifulSoup
 * csv
 * urllib
-* sklearn
+* requests
 * nltk
 * openpyxl
-* json
+* pandas
 
 
 
