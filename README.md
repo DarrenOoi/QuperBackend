@@ -22,6 +22,8 @@
 │       ├── get_language_type.py
 │   ├── Readability
 │   │	├── readability.py
+│   │	├── doubleNeg_obscure_qualifiers.py
+│   │	├── main_idea-location.py
 │   │	├── pp_example
 
 ```
@@ -29,11 +31,11 @@
 
 ## Description:
 
-Below we describe each main file in our folder below. The three phases are detailed in Section 4 (Phase 1), Section 5 (Phase 2) and Section 6 (Phase 3). 
+Below we describe each main file in our folder below.
 
-### Phase 1 
+### Compliance of disclosure
 
-```P1_PP_processing.py```: Run this file to obtain the full outputs on the console. By default, the privacy policy results generated based on the ```pp_example``` folder will be printed. 
+```compliance of disclosure.py```: Run this file to obtain the full outputs on the console. By default, the privacy policy results generated based on the ```pp_example``` folder will be printed. 
 
 <!-- paragraph_level: Steps to process the privacy policy in paragraphs -->
 ```text_preprocessing.py```: Preprocess the text of the privacy policy document, such as part of speech (POS) normalization, stemming and deleting stop words.
