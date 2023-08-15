@@ -79,3 +79,7 @@ Some examples of privacy policy documents.
 
 <!-- pp_example -->
 Some examples of privacy policy documents.
+
+### dataset
+```title.csv``` ---> used by ```bys_classifier.pkl``` and ```bys_tf.pkl``` for Title Bayesian classifier and Title Bayesian feature vector transformer training.
+```language_data_set.xlsx``` ---> used by ```get_language_type.py``` for compare with the supported language versions of the acquired skill privacy policy.
