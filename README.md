@@ -60,7 +60,7 @@ Some examples of privacy policy documents.
 
 ```timeline.py```: Automated test script to get privacy policy web page updates by visiting the waybackmachine website.
 
-### Availability
+#### Availability
 
 ```get_external_link.py```: Find all the external links in the html page and check their status codes. Please refer to ```get_external_link.md``` for details on how to use it.
 
@@ -70,7 +70,7 @@ Some examples of privacy policy documents.
 Some examples of privacy policy documents.
 
 
-## Readability 
+#### Readability 
 ```readability.py```:Calculate the ARI, FRES, LIX, Average Syllables per Word, Average Words per Sentence, Average Letters per Word, Sentence Count, Word Count, Reading Time (minutes), Speaking Time (minutes) of a text. Please refer to ```readability.md``` for details on how to use it.
 
 ```doubleNeg_obscure_qualifiers.py```: Find all sentences in the text that are double negatives and those that contain obscure qualifiers. Please refer to ```doubleNeg_obscure_qualifiers.md``` for details on how to use it.
