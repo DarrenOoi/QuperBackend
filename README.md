@@ -25,6 +25,8 @@
 │   │	├── doubleNeg_obscure_qualifiers.py
 │   │	├── main_idea-location.py
 │   │	├── pp_example
+├── dataset
+│   ├── title.csv
 
 ```
 ***Note:*** This tree includes only main files. 
@@ -33,7 +35,8 @@
 
 Below we describe each main file in our folder below.
 
-### Compliance of disclosure
+### src
+#### Compliance of disclosure
 
 ```compliance of disclosure.py```: Run this file to obtain the full outputs on the console. Filter out privacy policies with unsupported formats and without subheadings. By default, the privacy policy results generated based on the ```pp_example``` folder will be printed. 
 
