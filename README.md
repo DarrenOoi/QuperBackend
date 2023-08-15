@@ -35,39 +35,18 @@ Below we describe each main file in our folder below.
 
 ### Compliance of disclosure
 
-```compliance of disclosure.py```: Run this file to obtain the full outputs on the console. By default, the privacy policy results generated based on the ```pp_example``` folder will be printed. 
+```compliance of disclosure.py```: Run this file to obtain the full outputs on the console. Filter out privacy policies with unsupported formats and without subheadings. By default, the privacy policy results generated based on the ```pp_example``` folder will be printed. 
 
-<!-- paragraph_level: Steps to process the privacy policy in paragraphs -->
-```text_preprocessing.py```: Preprocess the text of the privacy policy document, such as part of speech (POS) normalization, stemming and deleting stop words.
+```predict_content.py```: Use trained Bayesian classifier(bys_classifier.pkl) as well as a feature vector transformer (bys_tf.pkl) to predict the presence of subtitles in the privacy policy. Please refer to ```predict_content.md``` for details on how to use it.
 
 ```find_subtitle.py```: Detect subtitle tags in the privacy policy document. Please refer to ```find_subtitle.md``` for details on how to use it.
 
-```paragraph_bayesian.py```: Train a paragraph-level Bayesian classifier. Please refer to ```paragraph_bayesian.md``` for details on how to use it.
+```bys_classifier.pkl```: Train a paragraph-level Bayesian classifier. Please refer to ```paragraph_bayesian.md``` for details on how to use it.
 
-```get_text.py```: Write the text of the corresponding paragraph to the corresponding TXT file. Please refer to ```get_text.md``` for details on how to use it.
+```bys_tf.pkl```: 
 
 ```types_pp_processing.py```: Process the data-type paragraph and get a matrix containing 0 and 1. 0 stands for the data type not being collected, while 1 stands for being collected. Please refer to ```type_pp_processing.md``` for details on how to use it.
 
-<!-- sentence_level:Steps to process the privacy policy in sentence -->
-```sentence_bayesian.py```: Train a sentence-level Bayesian classifier.
-
-```phrase_similarity.py```: Algorithm 1 in the paper, which compares the similarity of two phrases. Please refer to ```phrase_similarity.md``` for details on how to use it.
-
-<!-- processing of other paragraphs (children, region, retention) -->
-```children_pp_processing.py```: Process CHILDREN paragraphs. It prints the [category vector] of CHILDREN policy.
-
-```region_pp_processing.py```: Process REGION paragraphs and check whether they refer to special policies for California region.
-
-```retention_pp_processing.py```: Process RETENTION paragraphs and find the data retention period.
-
-<!-- txt file description -->
-Those TXT files in the txt folder are intermediate results generated after parsing each paragraph in a privacy policy, for example,   
-```data_types.txt``` ---> types paragraph  
-```children.txt``` ---> children paragraph  
-```region.txt``` ---> region paragraph  
-```data_retention.txt``` ---> retention paragraph  
-
-***Notice:*** Each of these TXT file holds only one paragraph of the privacy policy at a time, which means that when we start parsing a new privacy policy, the entire TXT file will be cleared (use ```txt_clean.py```).
 
 <!-- csv file description -->
 CSV files located in ```dataset/training_data``` are mainly used to train classifiers. They include samples that we manually annotated.   
