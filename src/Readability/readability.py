@@ -51,8 +51,8 @@ def calculate_metrics(text):
     avg_words_per_sentence = num_words / num_sentences
     avg_letters_per_word = num_characters / num_words
 
-    reading_time = num_words / 200  # Assuming average reading speed of 200 words per minute
-    speaking_time = num_words / 150  # Assuming average speaking speed of 150 words per minute
+    reading_time = num_words / 238 
+    speaking_time = num_words / 183 
 
     return avg_syllables_per_word, avg_words_per_sentence, avg_letters_per_word, num_sentences, num_words, reading_time, speaking_time
 
