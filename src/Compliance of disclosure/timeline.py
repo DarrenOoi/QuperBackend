@@ -60,7 +60,7 @@ def getFrequency(url):
         pass
         print("not find urlbutton")
 
-    sleep(2)
+    sleep(5)
 
     try:
         root = bor.find_element(by=By.ID,value='url-query-result').find_element(by=By.ID,value='resultsUrl_wrapper').find_elements(by=By.CLASS_NAME,value='row')[1].find_element(by=By.CLASS_NAME,value='col-sm-12').find_element(by=By.ID,value='resultsUrl').find_element(by=By.TAG_NAME,value='tbody').find_element(by=By.CLASS_NAME,value='odd')
@@ -104,4 +104,4 @@ def Find_kuohao(string):
         result = list(set(result))
     return result
 
-print(getFrequency("https://help.abc.net.au/hc/en-us/articles/360001154976-ABC-Privacy-Policy"))
+# print(getFrequency("https://help.abc.net.au/hc/en-us/articles/360001154976-ABC-Privacy-Policy"))

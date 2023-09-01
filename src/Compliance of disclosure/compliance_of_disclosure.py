@@ -18,9 +18,9 @@ def all_process(url):
 
         # Perform analysis on the soup object and generate results
         results = analyze_soup(soup)
-        return {"result": results}
+        return results
     except requests.exceptions.RequestException as e:
-        return {"result": "Failed to fetch or parse the URL."}
+        return "Failed to fetch or parse the URL."
 
 
 def analyze_soup(soup):
@@ -32,7 +32,24 @@ def analyze_soup(soup):
     # print(title_list)
     type, cookie, share, security, right, children, specialArea, update, how, provide, retention, useData, order = pre_title(
         title_list)
-    return type, cookie, share, security, right, children, specialArea, update, how, provide, retention, useData, order, 0, 0
+    
+    completeness = {
+        "type": type,
+        "cookie": cookie,
+        "share": share,
+        "security": security,
+        "right": right,
+        "children": children,
+        "specialArea": specialArea,
+        "update": update,
+        "how": how,
+        "provide": provide,
+        "retention": retention,
+        "useData": useData,
+        "order": order,
+    }
+    return completeness
+    # return type, cookie, share, security, right, children, specialArea, update, how, provide, retention, useData, order, 0, 0
 
 # print(all_process("https://explore.zoom.us/en/privacy/"))
 # print(getFrequency("https://help.abc.net.au/hc/en-us/articles/360001154976-ABC-Privacy-Policy"))
