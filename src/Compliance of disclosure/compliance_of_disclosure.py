@@ -20,7 +20,7 @@ def all_process(url):
         results = analyze_soup(soup)
         return results
     except requests.exceptions.RequestException as e:
-        return "Failed to fetch or parse the URL."
+        return False
 
 
 def analyze_soup(soup):

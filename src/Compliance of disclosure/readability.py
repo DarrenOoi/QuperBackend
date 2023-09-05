@@ -93,16 +93,16 @@ def calculate_readability(url):
         text)
 
     metrics = {
-        "ARI": ari,
-        "FRES": fres,
-        "LIX": lix,
-        "Average Syllables per Word": avg_syllables_per_word,
-        "Average Words per Sentence": avg_words_per_sentence,
-        "Average Letters per Word": avg_letters_per_word,
-        "Sentence Count": num_sentences,
-        "Word Count": num_words,
-        "Reading Time (minutes)": reading_time,
-        "Speaking Time (minutes)": speaking_time
+        "ARI": round(ari,2),
+        "FRES": round(fres,2),
+        "LIX": round(lix,2),
+        "Average Syllables per Word":round(avg_syllables_per_word,2) ,
+        "Average Words per Sentence": round(avg_words_per_sentence,2),
+        "Average Letters per Word": round(avg_letters_per_word,2),
+        "Sentence Count": round(num_sentences,2),
+        "Word Count": round(num_words,2),
+        "Reading Time (minutes)":round(reading_time,2),
+        "Speaking Time (minutes)": round(speaking_time,2)
     }
 
     return metrics

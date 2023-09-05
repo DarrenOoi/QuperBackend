@@ -83,7 +83,16 @@ def getFrequency(url):
     # print(captures)
     # print(duplicates)
     # print(uniques)
-    return startTime.text , endTime.text , captures.text,duplicates.text,uniques.text
+    timeline = {
+        "start" : startTime.text,
+        "end" : endTime.text,
+        "captures" : captures.text,
+        "duplicates" : duplicates.text,
+        "uniques" : uniques.text,
+    }
+
+    return timeline
+    # return startTime.text , endTime.text , captures.text,duplicates.text,uniques.text
 
 # getFrequency("https://www.energyhub.com/privacy")
 # getFrequency('https://www.allegion.com/corp/en/footer/privacy-statement/tr.html')
@@ -104,4 +113,4 @@ def Find_kuohao(string):
         result = list(set(result))
     return result
 
-# print(getFrequency("https://help.abc.net.au/hc/en-us/articles/360001154976-ABC-Privacy-Policy"))
+# print(getFrequency("https://explore.zoom.us/en/privacy/"))
