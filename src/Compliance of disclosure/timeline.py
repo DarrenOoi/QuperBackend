@@ -113,4 +113,4 @@ def Find_kuohao(string):
         result = list(set(result))
     return result
 
-# print(getFrequency("https://explore.zoom.us/en/privacy/"))
+print(getFrequency("https://explore.zoom.us/en/privacy/"))
