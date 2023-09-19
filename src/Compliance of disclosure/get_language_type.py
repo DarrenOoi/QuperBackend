@@ -51,6 +51,8 @@ def selectFunction(url):
     language = []
     options = Options()
     options.headless = True
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     bor = webdriver.Chrome(options=options)
     # bor = webdriver.Chrome('chromium.chromedriver', options=options)
     bor.maximize_window()
