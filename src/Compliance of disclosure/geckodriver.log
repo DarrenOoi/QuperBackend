@@ -1,0 +1,71 @@
+1695097041178	geckodriver	INFO	Listening on 127.0.0.1:64726
+1695097044239	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-gpu" "--no-sandbox"  ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\darre\\AppData\\Local\\Temp\\rust_mozprofile2qOM15"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695097044731	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-gpu"
+console.error: "Warning: unrecognized command line flag" "-disable-dev-shm-usage"
+1695097044820	Marionette	INFO	Listening on port 64744
+WebDriver BiDi listening on ws://127.0.0.1:64727
+Read port: 64744
+1695097045062	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:64727/devtools/browser/103de0e8-5cc7-4eaa-baf4-5abdda4e0688
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+1695097059363	geckodriver	INFO	Listening on 127.0.0.1:64856
+1695097062414	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-gpu" "--no-sandbox"  ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\darre\\AppData\\Local\\Temp\\rust_mozprofileYbgson"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695097062714	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-gpu"
+console.error: "Warning: unrecognized command line flag" "-disable-dev-shm-usage"
+1695097062770	Marionette	INFO	Listening on port 64867
+WebDriver BiDi listening on ws://127.0.0.1:64857
+Read port: 64867
+1695097062969	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:64857/devtools/browser/8d6949c7-edc0-4d73-828a-4c795469eabd
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+1695097111017	geckodriver	INFO	Listening on 127.0.0.1:65052
+1695097114038	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--disable-gpu" "--no-sandbox"  ... 3" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\darre\\AppData\\Local\\Temp\\rust_mozprofileeRiTMh"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695097114336	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-gpu"
+console.error: "Warning: unrecognized command line flag" "-disable-dev-shm-usage"
+1695097114394	Marionette	INFO	Listening on port 65064
+WebDriver BiDi listening on ws://127.0.0.1:65053
+Read port: 65064
+1695097114607	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:65053/devtools/browser/07888e5f-3086-41b3-aa80-853916fc1ee3
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+JavaScript error: https://explore.zoom.us/en/privacy/, line 4926: TypeError: cookie._ga is undefined
+1695097124289	geckodriver	INFO	Listening on 127.0.0.1:65142
+1695097127356	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" ... 3" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\darre\\AppData\\Local\\Temp\\rust_mozprofileLW454K"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695097127694	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-gpu"
+console.error: "Warning: unrecognized command line flag" "-disable-dev-shm-usage"
+1695097127749	Marionette	INFO	Listening on port 65153
+WebDriver BiDi listening on ws://127.0.0.1:65143
+Read port: 65153
+1695097127931	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:65143/devtools/browser/52104b48-ccf1-4467-9ca0-ddd04d6f62b5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://archive.org."
