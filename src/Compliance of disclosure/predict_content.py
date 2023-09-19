@@ -1,18 +1,16 @@
-import csv
 import re
-
 import bs4
 import joblib
 
-from bs4 import BeautifulSoup
-
-mark_txt = {'0':"personal_information_type.txt",'1':"personal_information_type.txt",'2':"personal_information_type.txt",
-             '3':"share_information.txt",'4':"protect_information.txt",
-             '5':"advertising.txt",'6':"user_right.txt",'7':"special_group.txt",
-             '8':"special_area.txt",'9':"update.txt",'10':"way_to_collect.txt",
-             '11':"provider.txt",'12':"data_retention.txt",'13':"personal_information_type.txt",'14':"thrid_party.txt",'15':"personal_infoinformation_tyoe.txt"}
+mark_txt = {'0': "personal_information_type.txt", '1': "personal_information_type.txt", '2': "personal_information_type.txt",
+            '3': "share_information.txt", '4': "protect_information.txt",
+            '5': "advertising.txt", '6': "user_right.txt", '7': "special_group.txt",
+            '8': "special_area.txt", '9': "update.txt", '10': "way_to_collect.txt",
+            '11': "provider.txt", '12': "data_retention.txt", '13': "personal_information_type.txt", '14': "thrid_party.txt", '15': "personal_infoinformation_tyoe.txt"}
 clf = joblib.load('bys_classifier.pkl')
 tf = joblib.load('bys_tf.pkl')
+
+
 def pre_title(title_list):
     type = 0
     cookie = 0
@@ -33,7 +31,8 @@ def pre_title(title_list):
     order = []
     for title in clean_title_list:
         title_Str = re.sub(r'\s+', ' ', str(title))
-        title_Str = re.sub(r'<[^<]+?>', '', title_Str).replace('\n', '').strip()
+        title_Str = re.sub(
+            r'<[^<]+?>', '', title_Str).replace('\n', '').strip()
         title_Str = title_Str.lower()
         if title is None:
             continue
@@ -78,7 +77,7 @@ def pre_title(title_list):
         if mark[0] not in order:
             order.append(mark[0])
 
-    return type , cookie , share , security , right , children , specialArea , update , how ,  provide , retention , useData, order
+    return type, cookie, share, security, right, children, specialArea, update, how,  provide, retention, useData, order
 
 
 def get_text(title_list):
@@ -96,8 +95,9 @@ def get_text(title_list):
             clean_title_list.append(title)
     lastMark = ""
     for title in clean_title_list:
-        title_Str = re.sub(r'\s+', ' ',str(title))
-        title_Str = re.sub(r'<[^<]+?>', '', title_Str).replace('\n','').strip()
+        title_Str = re.sub(r'\s+', ' ', str(title))
+        title_Str = re.sub(
+            r'<[^<]+?>', '', title_Str).replace('\n', '').strip()
         if title is None:
             continue
         try:
@@ -130,7 +130,7 @@ def get_text(title_list):
                     # if clf.predict(tf.transform([sibling.string])) == "0":
                     #     print(1)
                     # else:
-                        break
+                    break
             except Exception:
                 continue
             if isinstance(sibling, bs4.element.Tag):
@@ -141,18 +141,18 @@ def get_text(title_list):
                 continue
             # last
             if clean_title_list.index(title) == len(clean_title_list) - 1:
-                with open(mark_txt.get(mark[0]),"a") as f:
+                with open(mark_txt.get(mark[0]), "a") as f:
                     currentSibing = str(sibling)
                     if currentSibing[-1].isalpha() or currentSibing[-1] == ")":
                         currentSibing = currentSibing + "."
                     f.write(currentSibing)
                     f.close()
             else:
-                with open(mark_txt.get(mark[0]),"a") as g:
+                with open(mark_txt.get(mark[0]), "a") as g:
                     currentSibing = str(sibling)
                     if currentSibing[-1].isalpha() or currentSibing[-1] == ")":
                         currentSibing = currentSibing + "."
                     g.write(currentSibing)
                     g.write("\n")
                     g.close()
-    return type,security,right,specialArea,specialGroup,update,retention,useData
+    return type, security, right, specialArea, specialGroup, update, retention, useData

@@ -1,14 +1,8 @@
-import csv
-import os
-
 from bs4 import BeautifulSoup
-from flask import Flask, request, jsonify
-from flask_cors import CORS
 import requests
-import json
-import pandas as pd
 from predict_content import pre_title
 from find_Title import findTitleLabel
+
 
 def all_process(url):
     try:
@@ -32,7 +26,7 @@ def analyze_soup(soup):
     # print(title_list)
     type, cookie, share, security, right, children, specialArea, update, how, provide, retention, useData, order = pre_title(
         title_list)
-    
+
     completeness = {
         "type": type,
         "cookie": cookie,
@@ -53,6 +47,7 @@ def analyze_soup(soup):
 
 # print(all_process("https://explore.zoom.us/en/privacy/"))
 # print(getFrequency("https://help.abc.net.au/hc/en-us/articles/360001154976-ABC-Privacy-Policy"))
+
 
 if __name__ == '__main__':
     print(all_process("https://www.stokedskills.com/privacy/escapetheroom.html"))
