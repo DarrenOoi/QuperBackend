@@ -4,8 +4,7 @@ from selenium import webdriver
 import pandas as pd
 from time import sleep
 from selenium.webdriver.common.by import By
-# from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from openpyxl import Workbook
 
 
@@ -49,12 +48,12 @@ def get_url():
 def selectFunction(url):
     language = []
     options = Options()
-    options.headless = True
+    # options.headless = True
+    options.add_argument('--headless')
     options.add_argument('--disable-gpu')
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    bor = webdriver.Firefox(options=options)
-    # bor = webdriver.Chrome(options=options)
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    bor = webdriver.Chrome(options=options)
     # bor = webdriver.Chrome('chromium.chromedriver', options=options)
     bor.maximize_window()
     # bor = webdriver.Chrome(executable_path='chromedriver')

@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from waybackpy import WaybackMachineSaveAPI
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 
@@ -16,9 +16,9 @@ def getFrequency(url):
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    bor = webdriver.Firefox(options=options)
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    bor = webdriver.Chrome(options=options)
     bor.maximize_window()
     bor.get('https://archive.org/web/')
     # positioning input boxes
