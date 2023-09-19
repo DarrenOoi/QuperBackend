@@ -1,6 +1,4 @@
-import csv
 import re
-
 import pandas as pd
 from selenium import webdriver
 import pandas as pd
@@ -51,6 +49,7 @@ def selectFunction(url):
     language = []
     options = Options()
     options.headless = True
+    options.add_argument('--disable-gpu')
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     bor = webdriver.Chrome(options=options)
@@ -267,60 +266,8 @@ def Find_kuohao(string):
     return result
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # a = selectFunction("https://docs.google.com/document/d/1kNx08hnAqT9GYH-SKV77uxG3YCHGizuKgHLNLOd9L2g/edit")
-    url = "https://www.nordlux.com/legal/privacy-policy/"
-    test_sup_languages = selectFunction(url)
-    print(test_sup_languages)
-    # df = pd.read_excel('./language_data_set.xlsx')
-    # df_li = df.values.tolist()
-    # flag = 0
-    # for skill in df_li:
-    #     sup_languages = Find_kuohao(skill[1])
-    #     http = Find(skill[1])[0]
-    #     test_sup_languages = selectFunction(http)
-    #     if len(test_sup_languages) >= 10 and "google.com" in skill[1]:
-    #         test_sup_languages = "format error"
-    #     if type(test_sup_languages) is list:
-    #         for i in test_sup_languages:
-    #             sup_languages.append(i)
-    #     else:
-    #         sup_languages.append(test_sup_languages)
-    #     sup_languages = list(set(sup_languages))
-    #     # f = open('data_retention1.csv', 'a', encoding='utf-8')
-    #     # # f = open('ppData5.csv', 'a', encoding='utf-8')
-    #     # csv_writer = csv.writer(f, dialect='unix')
-    #     # csv_writer.writerow([skill[0], skill[2], sup_languages])
-    #     print(skill[0])
-    #     print(sup_languages)
-    #     flag += 1
-    #     print(flag)
-
-    # f = open('data_retention1.csv', 'a', encoding='utf-8')
-    # # f = open('ppData5.csv', 'a', encoding='utf-8')
-    # csv_writer = csv.writer(f, dialect='unix')
-    # csv_writer.writerow(["index", "support_language", "test_language"])
-
-    # sup_languages = skill[2].split(',')
-    # remain_languages = []
-    # for language in sup_languages:
-    #     if "English" not in language:
-    #         remain_languages.append(language)
-    # if len(remain_languages) > 0:
-    #     Have_another_languages += 1
-    #     print(Have_another_languages_list)
-    #     Have_another_languages_list.append(skill[0])
-    #     flag = 0
-    #     for remain in remain_languages:
-    #         index_parentheses = remain.index("(")
-    #         remain_lang = remain[:index_parentheses]
-    #         if remain_lang in skill[1]:
-    #             continue
-    #         else:
-    #             http = Find(skill[1])[0]
-    #             all_sup = selectFunction(http)
-
-    # for s_li in df_li:
-    #     result.append(s_li[2])
-    # a = selectFunction()
-    # print(a)
+    # url = "https://www.nordlux.com/legal/privacy-policy/"
+    # test_sup_languages = selectFunction(url)
+    # print(test_sup_languages)
