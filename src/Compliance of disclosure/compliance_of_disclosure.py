@@ -12,6 +12,7 @@ def all_process(url):
 
         # Perform analysis on the soup object and generate results
         results = analyze_soup(soup)
+        soup.decompose()
         return results
     except requests.exceptions.RequestException as e:
         return False

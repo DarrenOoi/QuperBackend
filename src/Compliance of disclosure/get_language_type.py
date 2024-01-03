@@ -245,7 +245,7 @@ def selectFunction(url):
         pass
 
     language = list(set(language))
-
+    bor.quit()
     return language
 
 
