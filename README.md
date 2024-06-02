@@ -33,7 +33,7 @@
 
 ## Description:
 
-Below we describe each main file in our folder below.
+Description of main files are outlined below:
 
 ### src
 
