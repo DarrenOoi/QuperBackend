@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-from predict_content import pre_title
-from find_Title import findTitleLabel
+from .predict_content import pre_title
+from .find_Title import findTitleLabel
 
 
 def all_process(url):

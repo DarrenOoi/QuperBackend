@@ -1,5 +1,6 @@
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize.sonority_sequencing import SyllableTokenizer
 from bs4 import BeautifulSoup
 import requests
 nltk.download('punkt')
@@ -24,9 +25,14 @@ def calculate_fres(text):
 
     num_words = len(words)
     num_sentences = len(sentences)
+    syllable_tokenizer = SyllableTokenizer()
 
+    syllable_count = sum(len(syllable_tokenizer.tokenize(word))
+                         for word in words)
     fres = 206.835 - 1.015 * (num_words / num_sentences) - \
-        84.6 * (sum(len(word) for word in words) / num_words)
+        84.6 * (syllable_count / num_words)
+    # fres = 206.835 - 1.015 * (num_words / num_sentences) - \
+    #     84.6 * (sum(len(word) for word in words) / num_words)
     return fres
 
 
@@ -113,4 +119,4 @@ def calculate_readability(url):
 
 
 if __name__ == "__main__":
-    calculate_readability("https://explore.zoom.us/en/privacy/")
+    print(calculate_readability("https://www.adobe.com/privacy/policy.html"))

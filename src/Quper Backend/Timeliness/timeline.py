@@ -48,4 +48,4 @@ def getFrequency(url):
 
 
 # print(getFrequency("https://www.allianz.com/en/privacy-statement.html"))
-print(getFrequency("https://explore.zoom.us/en/privacy/"))
+# print(getFrequency("https://explore.zoom.us/en/privacy/"))

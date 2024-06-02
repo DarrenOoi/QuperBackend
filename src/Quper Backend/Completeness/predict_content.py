@@ -1,14 +1,21 @@
 import re
 import bs4
 import joblib
+import os
+
+script_dir = os.path.dirname(__file__)
+classifier_path = os.path.join(script_dir, 'bys_classifier.pkl')
+tf_path = os.path.join(script_dir, 'bys_tf.pkl')
 
 mark_txt = {'0': "personal_information_type.txt", '1': "personal_information_type.txt", '2': "personal_information_type.txt",
             '3': "share_information.txt", '4': "protect_information.txt",
             '5': "advertising.txt", '6': "user_right.txt", '7': "special_group.txt",
             '8': "special_area.txt", '9': "update.txt", '10': "way_to_collect.txt",
             '11': "provider.txt", '12': "data_retention.txt", '13': "personal_information_type.txt", '14': "thrid_party.txt", '15': "personal_infoinformation_tyoe.txt"}
-clf = joblib.load('bys_classifier.pkl')
-tf = joblib.load('bys_tf.pkl')
+# clf = joblib.load('bys_classifier.pkl')
+# tf = joblib.load('bys_tf.pkl')
+clf = joblib.load(classifier_path)
+tf = joblib.load(tf_path)
 
 
 def pre_title(title_list):
