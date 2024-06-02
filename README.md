@@ -6,41 +6,41 @@
 ├── README.md
 ├── LICENSE.md
 ├── INSTALL.md
+├── dataset
+│   ├── title.csv
+│   ├── language_data_set.xlsx
 ├── src
-│   ├── Compliance of disclosure
-│   │	├── compliance_of_disclosure.py
+│   ├── Quper Backend
+│   │	├── Availability
+│   │       ├── get_external_link.py
+│   │       ├── get_language_type.py
+│   │	├── Completeness
+│   │       ├── compliance of disclosure.py
 │   │       ├── predict_content.py
 │   │       ├── find_subtitle.py
 │   │       ├── bys_classifier.pkl
 │   │       ├── bys_tf.pkl
-│   │	├── pp_example
-│   ├── Timeliness
-│   │	├── timeline.py
-│   ├── Availability
-├── ├── <!-- External Link -->
-│   │   ├── get_external_link.py
-├── ├── <!-- Language Type -->
-│       ├── get_language_type.py
-│   ├── Readability
-│   │	├── readability.py
-│   │	├── doubleNeg_obscure_qualifiers.py
-│   │	├── main_idea-location.py
-│   │	├── pp_example
-├── dataset
-│   ├── title.csv
-│   ├── language_data_set.xlsx
-
+│   │	├── Readability
+│   │       ├── readability.py
+│   │       ├── main_idea-location.py
+│   │       ├── doubleNeg_obscure_qualifiers.py
+│   │	├── Timeliness
+│   │       ├── timeline.py
+│   │	├── api.py
 ```
 
 **_Note:_** This tree includes only main files.
 
 ## Description:
 
-Below we describe each main file in our folder below.
+Description of main files are outlined below:
 
 ### src
 
-#### Compliance of disclosure
+### Quper Backend
+`api.py`: Flask application where API endpoints are defined
+
+#### Completeness
 
 `compliance of disclosure.py`: Run this file to obtain the full outputs on the console. Filter out privacy policies with unsupported formats and without subheadings. By default, the privacy policy results generated based on the `pp_example` folder will be printed.
 
@@ -52,14 +52,6 @@ Below we describe each main file in our folder below.
 
 `bys_tf.pkl`: Title Bayesian feature vector transformer trained from dataset/title.csv.
 
-<!-- csv file description -->
-
-`title.csv` ---> used by `paragraph_bayesian.py` for paragraph-level training
-
-<!-- pp_example -->
-
-Some examples of privacy policy documents.
-
 #### Timeliness
 
 `timeline.py`: Automated test script to get privacy policy web page updates by visiting the waybackmachine website.
@@ -70,9 +62,6 @@ Some examples of privacy policy documents.
 
 `get_language_type.py`: Automated test script tp get all supported languages in a privacy policy web page. Please refer to `get_language_type.md` for details on how to use it.
 
-<!-- pp_example -->
-
-Some examples of privacy policy documents.
 
 #### Readability
 
@@ -81,10 +70,6 @@ Some examples of privacy policy documents.
 `doubleNeg_obscure_qualifiers.py`: Find all sentences in the text that are double negatives and those that contain obscure qualifiers. Please refer to `doubleNeg_obscure_qualifiers.md` for details on how to use it.
 
 `main_idea_location.py`: Determine the location of the central idea of the sentence. Please refer to `main_idea_location.md` for details on how to use it.
-
-<!-- pp_example -->
-
-Some examples of privacy policy documents.
 
 ### dataset
 
